@@ -5,8 +5,10 @@ import (
 )
 
 func main() {
-	calculateUsingSwitch()
-	// calculateUsingIfelse()
+	calculateUsing3Operands()
+	//calculateUsing3OperandsAndSameOp()
+	// calculateUsingSwitch()
+	//calculateUsingIfelse()
 
 }
 
@@ -38,7 +40,7 @@ func calculateUsingIfelse() {
 	fmt.Scanf("%d %s %d", &a, &op, &b)
 	if op == "+" {
 		fmt.Println(a + b)
-	} else if op == "+" {
+	} else if op == "-" {
 		fmt.Println(a - b)
 	} else if op == "*" {
 		fmt.Println(a * b)
@@ -46,6 +48,67 @@ func calculateUsingIfelse() {
 		fmt.Println(a / b)
 	} else if op == "%" {
 		fmt.Println(a % b)
+	} else {
+		fmt.Println("not found")
+	}
+}
+
+func calculateUsing3OperandsAndSameOp() {
+	var a, b, c int
+	var op1, op2 string
+	fmt.Print("enter three numbers\n")
+	fmt.Scanf("%d %s %d %s %d", &a, &op1, &b, &op2, &c)
+	switch op1 {
+	case "+":
+		fmt.Println(a + b + c)
+	case "-":
+		fmt.Println(a - b - c)
+	case "*":
+		fmt.Println(a * b * c)
+	case "/":
+		fmt.Println(a / b / c)
+	case "%":
+		fmt.Println(a % b % c)
+	}
+}
+
+func calculateUsing3Operands() {
+	var a, b, c int
+	var op1, op2 string
+	fmt.Println("enter three numbers")
+	fmt.Scanf("%d %s %d %s %d", &a, &op1, &b, &op2, &c)
+	if op1 == "+" && op2 == "+" {
+		fmt.Println(a + b + c)
+	} else if op1 == "+" && op2 == "-" {
+		fmt.Println(a + b - c)
+	} else if op1 == "+" && op2 == "*" {
+		fmt.Println(a + b*c)
+	} else if op1 == "+" && op2 == "/" {
+		fmt.Println(a + b/c)
+	} else if op1 == "-" && op2 == "+" {
+		fmt.Println(a - b + c)
+	} else if op1 == "-" && op2 == "-" {
+		fmt.Println(a - b - c)
+	} else if op1 == "-" && op2 == "*" {
+		fmt.Println(a - b*c)
+	} else if op1 == "-" && op2 == "/" {
+		fmt.Println(a - b/c)
+	} else if op1 == "*" && op2 == "+" {
+		fmt.Println(a*b + c)
+	} else if op1 == "*" && op2 == "-" {
+		fmt.Println(a*b - c)
+	} else if op1 == "*" && op2 == "*" {
+		fmt.Println(a * b * c)
+	} else if op1 == "*" && op2 == "/" {
+		fmt.Println(a * b / c)
+	} else if op1 == "/" && op2 == "+" {
+		fmt.Println(a/b + c)
+	} else if op1 == "/" && op2 == "-" {
+		fmt.Println(a/b - c)
+	} else if op1 == "/" && op2 == "*" {
+		fmt.Println(a / b * c)
+	} else if op1 == "/" && op2 == "/" {
+		fmt.Println(a / b / c)
 	} else {
 		fmt.Println("not found")
 	}
