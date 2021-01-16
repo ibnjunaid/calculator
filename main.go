@@ -1,115 +1,156 @@
 package main
 
 import (
-	"fmt"
+//	"fmt"
 )
 
 func main() {
-	calculateUsing3Operands()
+	//calculateUsing3Operands()
 	//calculateUsing3OperandsAndSameOp()
-	// calculateUsingSwitch()
+	//CalculateUsingSwitch(6, "+", 2)
 	//calculateUsingIfelse()
-
+	//fmt.Printf("sum = %d\n", AddTwoNum(2, 2))
 }
 
-func calculateUsingSwitch() {
-	var a, b int
-	var op string
-	fmt.Print("enter two numbers\n")
-	fmt.Scanf("%d %s %d", &a, &op, &b)
+func AddTwoNum(x, y int) int {
+	return x + y
+}
+
+func CalculateUsingSwitch(a int, op string, b int) int {
+	//var a, b int
+	//var op string
+	//	fmt.Print("enter two numbers\n")
+	//	fmt.Scanf("%d %s %d", &a, &op, &b)
 	switch op {
 	case "+":
-		fmt.Println(a + b)
+		//fmt.Println(a + b)
+		return a + b
 	case "-":
-		fmt.Println(a - b)
+		//fmt.Println(a - b)
+		return a - b
 	case "*":
-		fmt.Println(a * b)
+		//fmt.Println(a * b)
+		return a * b
 	case "/":
-		fmt.Println(a / b)
+		//fmt.Println(a / b)
+		return a / b
 	case "%":
-		fmt.Println(a % b)
+		//fmt.Println(a % b)
+		return a % b
 	default:
-		fmt.Println("not found")
+		//fmt.Println("not found")
+		return -1
 	}
 }
 
-func calculateUsingIfelse() {
-	var a, b int
-	var op string
-	fmt.Print("enter two numbers\n")
-	fmt.Scanf("%d %s %d", &a, &op, &b)
+func CalculateUsingIfelse(a int, op string, b int) int {
+	//var a, b int
+	//var op string
+	//fmt.Print("enter two numbers\n")
+	//fmt.Scanf("%d %s %d", &a, &op, &b)
 	if op == "+" {
-		fmt.Println(a + b)
+		//fmt.Println(a + b)
+		return a + b
 	} else if op == "-" {
-		fmt.Println(a - b)
+		//	fmt.Println(a - b)
+		return a - b
 	} else if op == "*" {
-		fmt.Println(a * b)
+		//	fmt.Println(a * b)
+		return a * b
 	} else if op == "/" {
-		fmt.Println(a / b)
+		//	fmt.Println(a / b)
+		return a / b
 	} else if op == "%" {
-		fmt.Println(a % b)
+		//	fmt.Println(a % b)
+		return a % b
 	} else {
-		fmt.Println("not found")
+		//	fmt.Println("not found")
+		return 0
 	}
 }
 
-func calculateUsing3OperandsAndSameOp() {
-	var a, b, c int
-	var op1, op2 string
-	fmt.Print("enter three numbers\n")
-	fmt.Scanf("%d %s %d %s %d", &a, &op1, &b, &op2, &c)
+func CalculateUsing3OperandsAndSameOp(a int, op1 string, b int, op2 string, c int) int {
+	//var a, b, c int
+	//var op1, op2 string
+	//fmt.Print("enter three numbers\n")
+	//fmt.Scanf("%d %s %d %s %d", &a, &op1, &b, &op2, &c)
 	switch op1 {
 	case "+":
-		fmt.Println(a + b + c)
+		//	fmt.Println(a + b + c)
+		return a + b + c
 	case "-":
-		fmt.Println(a - b - c)
+		//	fmt.Println(a - b - c)
+		return a - b - c
 	case "*":
-		fmt.Println(a * b * c)
+		//	fmt.Println(a * b * c)
+		return a * b * c
 	case "/":
-		fmt.Println(a / b / c)
+		//	fmt.Println(a / b / c)
+		return a / b / c
 	case "%":
-		fmt.Println(a % b % c)
+		//	fmt.Println(a % b % c)
+		return a % b % c
+	default:
+		// fmt.Println("not found")
+		return -1
 	}
 }
 
-func calculateUsing3Operands() {
-	var a, b, c int
-	var op1, op2 string
-	fmt.Println("enter three numbers")
-	fmt.Scanf("%d %s %d %s %d", &a, &op1, &b, &op2, &c)
+func CalculateUsing3Operands(a int, op1 string, b int, op2 string, c int) int {
+	//var a, b, c int
+	//var op1, op2 string
+	//fmt.Println("enter three numbers")
+	//fmt.Scanf("%d %s %d %s %d", &a, &op1, &b, &op2, &c)
 	if op1 == "+" && op2 == "+" {
-		fmt.Println(a + b + c)
+		//	fmt.Println(a + b + c)
+		return a + b + c
 	} else if op1 == "+" && op2 == "-" {
-		fmt.Println(a + b - c)
+		//	fmt.Println(a + b - c)
+		return a + b - c
 	} else if op1 == "+" && op2 == "*" {
-		fmt.Println(a + b*c)
+		//	fmt.Println(a + b*c)
+		return a + b*c
 	} else if op1 == "+" && op2 == "/" {
-		fmt.Println(a + b/c)
+		//	fmt.Println(a + b/c)
+		return a + b/c
 	} else if op1 == "-" && op2 == "+" {
-		fmt.Println(a - b + c)
+		//	fmt.Println(a - b + c)
+		return a - b + c
 	} else if op1 == "-" && op2 == "-" {
-		fmt.Println(a - b - c)
+		//	fmt.Println(a - b - c)
+		return a - b - c
 	} else if op1 == "-" && op2 == "*" {
-		fmt.Println(a - b*c)
+		//	fmt.Println(a - b*c)
+		return a - b*c
 	} else if op1 == "-" && op2 == "/" {
-		fmt.Println(a - b/c)
+		//	fmt.Println(a - b/c)
+		return a - b/c
 	} else if op1 == "*" && op2 == "+" {
-		fmt.Println(a*b + c)
+		//	fmt.Println(a*b + c)
+		return a*b + c
 	} else if op1 == "*" && op2 == "-" {
-		fmt.Println(a*b - c)
+		//	fmt.Println(a*b - c)
+		return a*b - c
 	} else if op1 == "*" && op2 == "*" {
-		fmt.Println(a * b * c)
+		//	fmt.Println(a * b * c)
+		return a * b * c
 	} else if op1 == "*" && op2 == "/" {
-		fmt.Println(a * b / c)
+		//	fmt.Println(a * b / c)
+		return a * b / c
 	} else if op1 == "/" && op2 == "+" {
-		fmt.Println(a/b + c)
+		//	fmt.Println(a/b + c)
+		return a/b + c
 	} else if op1 == "/" && op2 == "-" {
-		fmt.Println(a/b - c)
+		//	fmt.Println(a/b - c)
+		return a/b - c
 	} else if op1 == "/" && op2 == "*" {
-		fmt.Println(a / b * c)
+		//	fmt.Println(a / b * c)
+		return a / b * c
 	} else if op1 == "/" && op2 == "/" {
-		fmt.Println(a / b / c)
+		//	fmt.Println(a / b / c)
+		return a / b / c
 	} else {
-		fmt.Println("not found")
+		//	fmt.Println("not found")
+		return 0
 	}
 }
