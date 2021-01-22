@@ -4,19 +4,19 @@ import (
 	"fmt"
 )
 
-func add(a, b int) int {
+func Add(a, b int) int {
 	return a + b
 }
 
-func subtract(a, b int) int {
+func Subtract(a, b int) int {
 	return a - b
 }
 
-func product(a, b int) int {
+func Product(a, b int) int {
 	return a * b
 }
 
-func division(a, b int) int {
+func Division(a, b int) int {
 	if b == 0 {
 		err := fmt.Errorf("Divide by zero Error")
 		panic(err)
@@ -24,7 +24,7 @@ func division(a, b int) int {
 	return a / b
 }
 
-func modulo(a, b int) int {
+func Modulo(a, b int) int {
 	if b == 0 {
 		err := fmt.Errorf("Modulo by zero Error")
 		panic(err)
